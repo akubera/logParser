@@ -1,5 +1,15 @@
 ##############
 # Data Files #
 ##############
-
 data/*
+
+#####################
+# Behind the scenes #
+#####################
+
+# Python virtulenv and bytecode
+env/
+__pycache__/
+
+# Text editor swap files
+*.swp
