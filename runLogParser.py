@@ -1,8 +1,16 @@
-from logParser import logParser
-import sys
+#!/usr/bin/env python
 
-if len(sys.argv) >= 2:
-    parser = logParser(sys.argv[1])
-else:
-    # bot = TwircBot()
-    print("Please provide a file name")
+from logParser import logParser
+from argparse import ArgumentParser
+
+
+def cli_arg_parser():
+    parser = ArgumentParser("logParser")
+    parser.add_argument("filename", help="File name of log to parse")
+    return parser
+
+
+if __name__ == '__main__':
+    args = cli_arg_parser().parse_args()
+    parser = logParser(args.filename)
+
