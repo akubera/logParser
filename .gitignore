@@ -10,6 +10,7 @@ data/*
 # Python virtulenv and bytecode
 env/
 __pycache__/
+*.py[cod]
 
 # Text editor swap files
 *.swp
